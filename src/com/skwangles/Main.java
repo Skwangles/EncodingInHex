@@ -1,30 +1,26 @@
 package com.skwangles;
 import java.io.*;
 import java.io.Reader.*;
+import java.io.IOException;
+
+import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-	    // Arg[0] is the location to the 'encode' file, optionally the second will be the output location
-        if(args.length < 3 || args[2] == "0") {//If value of
-            try (FileInputStream in = new FileInputStream(args[0]); FileOutputStream out = new FileOutputStream(args[1])) {
-                int c;
-                while ((c = in.read()) != -1) {
-                    out.write(Integer.parseInt(Integer.toHexString(c)));
-                }
-            } catch (Exception e) {
-                System.out.println("Error occured: " + e.toString());
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        //As per tony's instructions - takes from stdin, outputs to stdout
+            String entry = scanner.next();//Whole contents copied at once
+            byte[] bytes = entry.getBytes();
+            String s = convertArrayToHex(bytes);
+            System.out.println(s);
+
+    }
+
+    public static String convertArrayToHex( byte[] bytes) {
+        String hex = new String();
+        for (byte b: bytes) {
+                hex+=String.format("%02X ", b);//Converts to individual pairs of hex - hex value will have 0 added infront if it is too small
             }
-        }
-        else{
-            //--Dehexing
-            try (FileInputStream in = new FileInputStream(args[0]); FileOutputStream out = new FileOutputStream(args[1])) {
-                int c;
-                while ((c = in.read()) != -1) {
-                    out.write(Integer.parseInt(Integer.toBinaryString(c)));
-                }
-            } catch (Exception e) {
-                System.out.println("Error occured: " + e.toString());
-            }
-        }
+        return hex.toString();
     }
 }
