@@ -13,9 +13,9 @@ public class Main {
     }
 
     public static String convertArrayToHex( byte[] bytes) {
-        String hex = new String();
+        StringBuilder hex = "";
         for (byte b: bytes) {
-                hex+=String.format("%02X ", b);//Converts to individual pairs of hex - hex value will have 0 added infront if it is too small
+                hex.append(String.format("%02X ", b));//Converts to individual pairs of hex - hex value will have 0 added infront if it is too small
             }
         return hex.toString();
     }
