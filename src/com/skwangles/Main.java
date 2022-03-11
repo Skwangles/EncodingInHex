@@ -1,8 +1,4 @@
 package com.skwangles;
-import java.io.*;
-import java.io.Reader.*;
-import java.io.IOException;
-
 import java.util.Scanner;
 
 public class Main {
