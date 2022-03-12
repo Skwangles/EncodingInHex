@@ -1,0 +1,19 @@
+Index: src/com/skwangles/out.txt
+===================================================================
+diff --git a/src/com/skwangles/out.txt b/src/com/skwangles/out.txt
+deleted file mode 100644
+--- a/src/com/skwangles/out.txt	(revision e51d1ac61e712dc268b12a6a0890930b03c4ae06)
++++ /dev/null	(revision e51d1ac61e712dc268b12a6a0890930b03c4ae06)
+@@ -1,1 +0,0 @@
+-98D9BC809DF9809EC1DDC58099A38081DCC5F8C1DEC4C5E2
+\ No newline at end of file
+Index: src/com/skwangles/translated.txt
+===================================================================
+diff --git a/src/com/skwangles/translated.txt b/src/com/skwangles/translated.txt
+deleted file mode 100644
+--- a/src/com/skwangles/translated.txt	(revision e51d1ac61e712dc268b12a6a0890930b03c4ae06)
++++ /dev/null	(revision e51d1ac61e712dc268b12a6a0890930b03c4ae06)
+@@ -1,2 +0,0 @@
+-	R
+-�v
+\ No newline at end of file
