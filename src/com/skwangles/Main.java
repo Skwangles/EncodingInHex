@@ -42,26 +42,25 @@ public class Main {
 
     private static String hex_char_to_bin(char c)
     {
-        switch(Character.toUpperCase(c))
-        {
-            case '0': return "0000";
-            case '1': return "0001";
-            case '2': return "0010";
-            case '3': return "0011";
-            case '4': return "0100";
-            case '5': return "0101";
-            case '6': return "0110";
-            case '7': return "0111";
-            case '8': return "1000";
-            case '9': return "1001";
-            case 'A': return "1010";
-            case 'B': return "1011";
-            case 'C': return "1100";
-            case 'D': return "1101";
-            case 'E': return "1110";
-            case 'F': return "1111";
-            default: return "....";
-        }
+        return switch (Character.toUpperCase(c)) {
+            case '0' -> "0000";
+            case '1' -> "0001";
+            case '2' -> "0010";
+            case '3' -> "0011";
+            case '4' -> "0100";
+            case '5' -> "0101";
+            case '6' -> "0110";
+            case '7' -> "0111";
+            case '8' -> "1000";
+            case '9' -> "1001";
+            case 'A' -> "1010";
+            case 'B' -> "1011";
+            case 'C' -> "1100";
+            case 'D' -> "1101";
+            case 'E' -> "1110";
+            case 'F' -> "1111";
+            default -> "....";
+        };
     }
 }
 
